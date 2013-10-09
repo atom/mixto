@@ -1,6 +1,6 @@
 {
   "name": "mixto",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A mixin superclass. Its subclasses have `.extend` and `.includeInto` methods to mix behavior into other objects and classes.",
   "main": "lib/mixin",
   "scripts": {
@@ -15,7 +15,7 @@
     "trait"
   ],
   "bugs": {
-    "url": "https://github.com/atom/atom-db/issues"
+    "url": "https://github.com/atom/mixto/issues"
   },
   "licenses": [
     {
@@ -35,8 +35,5 @@
     "rimraf": "~2.2.2"
   },
   "author": "Nathan Sobo",
-  "license": "BSD-2-Clause",
-  "bugs": {
-    "url": "https://github.com/atom/mixto/issues"
-  }
+  "license": "BSD-2-Clause"
 }
