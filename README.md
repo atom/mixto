@@ -1,4 +1,4 @@
-# Mixto: A simple mixin superclass
+# Mixto: A simple mixin superclass [![Build Status](https://travis-ci.org/atom/mixto.png?branch=master)](https://travis-ci.org/atom/mixto)
 
 To create a mixin, subclass mixto:
 
