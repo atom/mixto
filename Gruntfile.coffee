@@ -18,6 +18,16 @@ module.exports = (grunt) ->
           level: 'ignore'
 
       src: ['src/*.coffee']
+      test: ['spec/*.coffee']
+      gruntfile: ['Gruntfile.coffee']
+
+    shell:
+      test:
+        command: 'node --harmony_collections node_modules/.bin/jasmine-focused --coffee --captureExceptions spec'
+        options:
+          stdout: true
+          stderr: true
+          failOnError: true
 
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-shell')
