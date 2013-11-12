@@ -13,6 +13,9 @@ class Mixin
         object[name] ?= @prototype[name]
     @prototype.extended?.call(object)
 
+  constructor: ->
+    @extended?()
+
 ExcludedClassProperties = ['__super__']
 ExcludedClassProperties.push(name) for name of Mixin
 ExcludedPrototypeProperties = ['constructor', 'extended']

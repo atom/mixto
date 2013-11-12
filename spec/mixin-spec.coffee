@@ -52,3 +52,11 @@ describe "Mixin", ->
 
     it "calls the ::extended hook with the target class's prototype as its context", ->
       expect(TargetClass::extendedCalled).toBe true
+
+  describe "construction", ->
+    it "includes all the mixin prototype methods and calls the ::extended hook", ->
+      instance = new TestMixin
+      expect(instance.a()).toBe 4
+      expect(instance.b()).toBe 5
+      expect(instance.c).toBe 6
+      expect(instance.extendedCalled).toBe true
