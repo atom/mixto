@@ -42,10 +42,16 @@ describe "Mixin", ->
       expect(TargetClass.b()).toBe 2
       expect(TargetClass.c).toBe 3
 
-    it "adds all the mixin' prototype properties to the target class's prototype if they aren't already defined", ->
+    it "adds all the mixin's prototype properties to the target class's prototype if they aren't already defined", ->
       expect(TargetClass::a).toBe 1
       expect(TargetClass::b()).toBe 5
       expect(TargetClass::c).toBe 6
+
+    it "overrides inherited prototype properties", ->
+      class TargetSubclass extends TargetClass
+        TestMixin.includeInto(this)
+
+      expect(TargetSubclass::a()).toBe 4
 
     it "calls the .included hook with the target class as its context", ->
       expect(TargetClass.includedCalled).toBe true
