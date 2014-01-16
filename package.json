@@ -1,6 +1,6 @@
 {
   "name": "mixto",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "description": "A mixin superclass. Its subclasses have `.extend` and `.includeInto` methods to mix behavior into other objects and classes.",
   "main": "lib/mixin",
   "scripts": {
