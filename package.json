@@ -4,7 +4,7 @@
   "description": "A mixin superclass. Its subclasses have `.extend` and `.includeInto` methods to mix behavior into other objects and classes.",
   "main": "lib/mixin",
   "scripts": {
-    "prepublish": "grunt clean lint coffee",
+    "prepublish": "grunt clean coffee lint",
     "test": "grunt test"
   },
   "repository": {

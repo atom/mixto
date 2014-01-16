@@ -35,5 +35,5 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'clean', -> require('rimraf').sync('lib')
   grunt.registerTask('lint', ['coffeelint:src', 'coffeelint:test'])
-  grunt.registerTask('default', ['coffeelint', 'coffee'])
+  grunt.registerTask('default', ['coffee', 'lint'])
   grunt.registerTask('test', ['lint', 'shell:test'])
