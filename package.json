@@ -34,6 +34,5 @@
     "grunt-coffeelint": "0.0.6",
     "rimraf": "~2.2.2"
   },
-  "author": "Nathan Sobo",
-  "license": "BSD-2-Clause"
+  "author": "Nathan Sobo"
 }
