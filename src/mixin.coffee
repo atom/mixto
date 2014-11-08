@@ -3,14 +3,14 @@ class Mixin
   @includeInto: (constructor) ->
     @extend(constructor.prototype)
     for name, value of this
-      if ExcludedClassProperties.indexOf(name) is -1
-        constructor[name] = value unless constructor.hasOwnProperty(name)
+      unless name in ExcludedClassProperties or constructor.hasOwnProperty(name)
+        constructor[name] = value
     @included?.call(constructor)
 
   @extend: (object) ->
     for name in Object.getOwnPropertyNames(@prototype)
-      if ExcludedPrototypeProperties.indexOf(name) is -1
-        object[name] = @prototype[name] unless object.hasOwnProperty(name)
+      unless name in ExcludedPrototypeProperties or object.hasOwnProperty(name)
+        object[name] = @prototype[name]
     @prototype.extended?.call(object)
 
   constructor: ->
