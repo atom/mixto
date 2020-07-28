@@ -4,7 +4,7 @@
   "description": "A mixin superclass. Its subclasses have `.extend` and `.includeInto` methods to mix behavior into other objects and classes.",
   "main": "lib/mixin",
   "scripts": {
-    "prepublish": "grunt clean coffee lint",
+    "prepublish": "grunt clean coffee lint && cpy src/es6.js lib",
     "test": "grunt test"
   },
   "repository": {
@@ -32,7 +32,8 @@
     "grunt": "~0.4.1",
     "grunt-shell": "~0.2.2",
     "grunt-coffeelint": "0.0.6",
-    "rimraf": "~2.2.2"
+    "rimraf": "~2.2.2",
+    "cpy-cli": "^3.1.1"
   },
   "author": "Nathan Sobo"
 }

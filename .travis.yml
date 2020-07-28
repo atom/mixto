@@ -4,7 +4,10 @@ notifications:
   email: false
 
 node_js:
-  - 0.10
+  - 8
+  - 10
+  - 12
+  - 14
 
 branches:
   only:
