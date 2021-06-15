@@ -1,4 +1,5 @@
-# Mixto: A simple mixin superclass [![Build Status](https://travis-ci.org/atom/mixto.png?branch=master)](https://travis-ci.org/atom/mixto)
+# Mixto: A simple mixin superclass
+[![CI](https://github.com/atom/mixto/actions/workflows/ci.yml/badge.svg)](https://github.com/atom/mixto/actions/workflows/ci.yml)
 
 To create a mixin, subclass mixto:
 
@@ -15,7 +16,7 @@ Then mix into classes with `.includeInto`:
 ```coffee
 class MyClass
   MyMixin.includeInto(this)
-  
+
 MyClass.classMethod()
 (new MyClass).instanceMethod()
 ```
